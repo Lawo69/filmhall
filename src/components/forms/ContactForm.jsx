@@ -5,7 +5,7 @@ const ContactForm = () => {
   const { loading, handleSubmit } = useContactForm();
 
   return (
-    <form className="min-w-md space-y-4 text-white" onSubmit={handleSubmit}>
+    <form className="lg:min-w-md space-y-4 text-white" onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm mb-1 text-gray-400">First Name *</label>
