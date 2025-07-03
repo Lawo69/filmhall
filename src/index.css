@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Inter", sans-serif;
+  background-color: #000000;
+  color: white;
+}
+
+@font-face {
+  font-family: 'DIN Alternate';
+  src: url('/fonts/DINAlternate-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-dinAlternate: "DIN Alternate", "sans-serif";
+  --font-openSans: "Open Sans", sans-serif;
+
+  --color-black-primary: #0F0F0F;
+  --color-black-secondary: #1D1D1D;
+  --color-orange: #CC9601;
+  --color-gray: #3C3C3C;
+}
+
+.active {
+  color: red;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+}
+  
+.animate-marquee {
+    animation: marquee 50s linear infinite;
+}
+
+.testimonials-swiper {
+    padding: 20px 0;
+}
+  
+.testimonials-swiper .swiper-slide {
+    height: auto;
+}
+
