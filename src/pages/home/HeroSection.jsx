@@ -1,13 +1,27 @@
-import React from 'react'
-import banner from "/assets/image/banner.png"
+import React, { useEffect, useState } from 'react';
+import banner1 from "/assets/image/banner1.png";
+import banner2 from "/assets/image/banner2.png";
+import banner3 from "/assets/image/banner3.png";
+
+const slides = [banner1, banner2, banner3];
 
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       <img
-        src={banner}
-        alt="banner-image"
-        className='w-full h-full'
+        src={slides[currentIndex]}
+        alt={`banner-${currentIndex}`}
+        className='w-full h-full object-cover transition-all duration-700 ease-in-out'
         data-aos="zoom-in"
         data-aos-duration="1000"
       />
@@ -31,7 +45,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
