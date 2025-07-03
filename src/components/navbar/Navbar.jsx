@@ -21,7 +21,9 @@ const Navbar = () => {
     <nav
       className="fixed top-0 left-0 right-0 z-50 bg-black-primary"
     >
-      <div className="container mx-auto flex items-center justify-between gap-2 backdrop-blur-sm shadow-lg py-4 px-6 md:px-8 lg:px-10">
+      <div 
+      className="container mx-auto flex items-center justify-between gap-2 backdrop-blur-sm shadow-lg py-4 px-6 md:px-8 lg:px-10"
+      data-aos="fade-down">
         <div
           className="flex items-center gap-1 cursor-pointer"
         >
@@ -61,6 +63,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div
           className="md:hidden bg-black-primary border-t border-black-primary py-4"
+          data-aos="fade-up"
         >
           <div
             className="container mx-auto px-4 space-y-4"
